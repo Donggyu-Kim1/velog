@@ -67,3 +67,4 @@ FOMC 회의를 앞둔 연준 위원들의 발언은 주식 시장에 큰 영향�
 
 결론적으로 단기적으로 기업들의 2분기 실적 발표가 나기 전까지 S&P 500 지수가 상승하기 어렵다고 주장하고 있다.
 
+[기사 링크](https://kr.investing.com/news/stock-market-news/article-1112158)
