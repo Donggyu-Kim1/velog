@@ -39,8 +39,9 @@
 6. 판 대가로 프리미엄을 온전히 수취하게 됨
 7. 하지만, 주식이 미리 정한 가격보다 더 오른다면 그만큼 손실을 입게 된다.
 8. 콜옵션을 매수한 사람은 또 그만큼 이득
-![콜옵션 매도](https://i-invdn-com.akamaized.net/akapi-images/bed4d0a7c9cf8d11820843863c9e5d0c.png)
-이 그림은 콜옵션 매수/매도 수익률 곡선이다.
+![커브드콜 수익률](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*z7Q5PeUgNH1XNxzDyxVWWw.png)
+
+이 그림은 커브드콜 수익률 곡선이다. [출처](https://medium.com/daily-defi-digest/ribbon-finance-%ED%83%88%EC%A4%91%EC%95%99%ED%99%94-%EA%B5%AC%EC%A1%B0%ED%99%94-%EC%83%81%ED%92%88-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-46f5f1b45c5f)
 
 ### 재요약
 
