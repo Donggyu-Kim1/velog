@@ -72,10 +72,9 @@
 
 현재 미국의 국채 금리는 5.20 ~ 5.25%다. 일반적인 채권의 수익률 곡선은 우상향하지만 금리 인하 기대감이 있는 지금 우하향 하는 것을 알 수 있다.
 
-<center>
-![미국채 수익률 곡선](Donggyu-Kim1/blog1/img/user/미국채수익률곡선.png)
-</center>
-<center> 미국채 수익률 곡선 [링크](https://kr.investing.com/rates-bonds/usa-government-bonds) </center>
+![미국채 수익률 곡선](img/user/미국채수익률곡선.png)
+
+<center> 미국채 수익률 곡선 </center>
 
 근데, 최근 미국채 3개월 금리를 봤을 때, 금리 인하 기대감이 확실히 꺾인 것을 알 수 있다.
 
