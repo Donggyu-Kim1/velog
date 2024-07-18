@@ -9,7 +9,7 @@ SQL과 파이썬을 연동하면 좋은 점을 AI에게 물어본 결과,
 
 1. 데이터 처리 효율성: SQL은 **대량의 데이터**를 효율적으로 쿼리하고 처리할 수 있고 파이썬과 연결하면 SQL의 이런 강점을 활용하면서 **파이썬의 유연성**도 활용할 수 있다는 장점이 있습니다.
 2. 자동화: 데이터베이스 작업을 **파이썬 스크립트**로 자동화할 수 있습니다.
-3. 데이터 분석: SQL로 데이터를 추출한 후 파이썬의 강력한 **데이터 분석 라이브러리(pandas, NumPy 등)**를 사용할 수 있습니다.
+3. 데이터 분석: SQL로 데이터를 추출한 후 파이썬의 강력한 **데이터 분석 라이브러리**를 사용할 수 있습니다.
 4. 웹 개발: 파이썬 웹 프레임워크(Django, Flask 등)와 SQL 데이터베이스를 연동해 풀스택 웹 애플리케이션을 개발할 수 있습니다.
 5. 유연한 데이터 조작: SQL 쿼리 결과를 **파이썬 객체로 쉽게 변환하여 추가 처리**할 수 있습니다.
 
@@ -20,7 +20,7 @@ SQL과 파이썬을 연동하면 좋은 점을 AI에게 물어본 결과,
 
 #### 1. pymysql 설치
 파이썬에는 pymysql 라이브러리가 있는데, 이를 아나콘다 Environments에서 설치해 줍니다.
-![install_pymysql](Donggyu-Kim1/blog1/img/install_pymysql.png)
+![install_pymysql](img/install_pymysql.png)
 
 #### 2. import pymysql
 그 다음 import pymysql 모듈을 추가합니다.
@@ -77,7 +77,7 @@ fetch는 데이터를 받아오고 fetchall은 모든 데이터를 받아오게 
 데이터를 다 불러왔으면 close로 데이터베이스와 연결을 종료합니다.
 
 #### 4. data 확인하기
-![data](Donggyu-Kim1/blog1/img/dataset.png)
+![data](img/dataset.png)
 이를 통해, MySQL에 있는 테이블 불러 올 수 있습니다.
 
 하지만, 사진처럼 튜플 형태로 되어 있고 칼럼명도 확인할 수 없어 상당히 불편합니다.
@@ -92,7 +92,7 @@ from sqlalchemy import create_engine
 ```
 판다스에서 sql을 연결할 때는 **SQLalchemy ORM**을 사용하게 되는데 
 
-**ORM**이란 어플리케이션과 데이터 베이스를 연결할 때 **sql이 아닌 어플리케이션 개발 언어**로 데이터베이스를 접근할 수 있게 해주는 툴입니다.
+**ORM**이란 어플리케이션과 데이터 베이스를 연결할 때 **SQL이 아닌 어플리케이션 개발 언어**로 데이터베이스를 접근할 수 있게 해주는 툴입니다.
 
 ```py
 # engine = create_engine('mysql+pymysql://[사용자명]:[비밀번호]@[host:포트]/[데이터베이스명]')
@@ -111,7 +111,7 @@ pandas 문법인 read_sql(쿼리, 연결정보)로 데이터 프레임 형태로
 마찬가지로 데이터를 다 불러왔으면 dispose로 연결을 종료해줍니다.
 
 테이블을 확인해보면, 
-![pandas_table](Donggyu-Kim1/blog1/img/table_sql.png)
+![pandas_table](img/table_sql.png)
 깔끔한 테이블을 확인할 수 있습니다.
 
 #### 6. 반대로 Python에서 SQL 데이터 테이블 생성
@@ -128,7 +128,7 @@ iris.to_sql(name='iris', con=engine, index=False, if_exists='replace')
 # name = 테이블명, con = 연결정보, index 번호 없이 생성할 시 False, if_exists='replace': 해당 테이블이 존재할 시 덮어씌움
 ```
 위 코드를 작성하여 sql로 보냅니다.
-![data_input](Donggyu-Kim1/blog1/img/data_input.png)
+![data_input](img/data_input.png)
 
 sql에서 확인해보면 테이블이 생성된 것을 확인할 수 있습니다.
 
