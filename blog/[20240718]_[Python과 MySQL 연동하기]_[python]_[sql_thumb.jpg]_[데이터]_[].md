@@ -1,11 +1,12 @@
 # Jupyter와 MySQL 연동하기
+
 ## 목차
-1. SQL과 연동하면 좋은점
+1. Python & SQL의 장점
 2. 연동 방법
 3. 활용
 
-### SQL과 연동하면 좋은점
-SQL과 파이썬을 연동하면 좋은 점을 AI에게 물어본 결과,
+### Python & SQL의 장점
+SQL과 파이썬을 연동하면 좋은 점을 AI에게 물어 본 결과,
 
 1. 데이터 처리 효율성: SQL은 **대량의 데이터**를 효율적으로 쿼리하고 처리할 수 있고 파이썬과 연결하면 SQL의 이런 강점을 활용하면서 **파이썬의 유연성**도 활용할 수 있다는 장점이 있습니다.
 2. 자동화: 데이터베이스 작업을 **파이썬 스크립트**로 자동화할 수 있습니다.
@@ -120,16 +121,18 @@ import seaborn as sns
 
 iris = sns.load_dataset('iris')
 ```
-seaborn라이브러리로 테이블을 불러와 
+seaborn 라이브러리로 테이블을 불러와서
 
 ```py
 engine = create_engine('mysql+pymysql://root:3406@localhost:3306/shop')
 iris.to_sql(name='iris', con=engine, index=False, if_exists='replace')
 # name = 테이블명, con = 연결정보, index 번호 없이 생성할 시 False, if_exists='replace': 해당 테이블이 존재할 시 덮어씌움
 ```
-위 코드를 작성하여 sql로 보냅니다.
+위 코드를 작성하여 데이터 테이블을 만든 후, SQL로 보냅니다.
 ![data_input](img/data_input.png)
 
-sql에서 확인해보면 테이블이 생성된 것을 확인할 수 있습니다.
+SQL에서 확인해보면 테이블이 생성된 것을 확인할 수 있습니다.
 
 이를 통해, SQL 데이터를 불러와 파이썬에서 분석하고 다시 SQL에 데이터를 저장할 수 있습니다.
+
+이 블로그는 [헨리의 퀀트대학 - [파이썬 퀀트] 8강 - 파이썬에서 SQL 연결해서 사용하기](https://www.youtube.com/watch?v=KHPXVIFkqaM&list=PLkREQFGfPOZ3g1aWNVEHoJRaUWOga10pw&index=21&t=628s) 를 참고하여 작성했습니다.
