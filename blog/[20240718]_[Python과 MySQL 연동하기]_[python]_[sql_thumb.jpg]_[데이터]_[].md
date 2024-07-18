@@ -128,6 +128,8 @@ iris.to_sql(name='iris', con=engine, index=False, if_exists='replace')
 # name = 테이블명, con = 연결정보, index 번호 없이 생성할 시 False, if_exists='replace': 해당 테이블이 존재할 시 덮어씌움
 ```
 위 코드를 작성하여 sql로 보냅니다.
+![data_input](Donggyu-Kim1/blog1/img/data_input.png)
 
+sql에서 확인해보면 테이블이 생성된 것을 확인할 수 있습니다.
 
 이를 통해, SQL 데이터를 불러와 파이썬에서 분석하고 다시 SQL에 데이터를 저장할 수 있습니다.
