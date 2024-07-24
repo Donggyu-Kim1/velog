@@ -1,11 +1,10 @@
 # 웹 크롤링 실습
 
-## 목표: 금융 데이터를 웹 크롤링으로 수집하기
-
 ## 목차
 1. 크롤링 시 주의해야 할 점
 2. GET 방식, POST 방식
-3. Quotes To Scrape 크롤링
+3. Quotes To Scrape 크롤링 - find_all
+4. Quotes To Scrape 크롤링 - select
 
 ### 크롤링 시 주의해야 할 점
 
@@ -15,13 +14,14 @@
 ### GET, POST
 
 - GET 방식이란, 서버로부터 데이터를 요청하기 위해 URL에 필요한 정보를 담아 전송하는 방법입니다.
+
 - POST 방식이란, 서버로 데이터를 제출하기 위해 HTTP Body에 데이터를 담아 전송하는 방법입니다.
     - POST 방식을 알려면 개발자 도구 -> Network -> Headers의 Request Method를 봐야 합니다.
     - POST 방식은 URL에 정보가 나오지 않기 때문에 위와 같은 방식으로 들어가면 Payload에 나와 있습니다.
 
-###  Quotes To Scrape 페이지 크롤링하기
+###  Quotes To Scrape 페이지 크롤링하기 - find_all
 
-**[Quotes to Scrape](https://quotes.toscrape.com/) 크롤링**
+[Quotes to Scrape](https://quotes.toscrape.com/) 크롤링
 
 크롤링을 하기 위해선 내가 어떤 데이터를 가져올 것인지 개발자도구를 통해 태그의 위치를 찾아야 합니다.
 
@@ -81,12 +81,34 @@ quote_div[0].find_all('span', class_='text')[0].text
 결과 값:
 
 ['“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”',
+
  '“It is our choices, Harry, that show what we truly are, far more than our abilities.”',
+
  '“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”',
+
  '“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”',
+
  "“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”",
+
  '“Try not to become a man of success. Rather become a man of value.”',
+
  '“It is better to be hated for what you are than to be loved for what you are not.”',
+
  "“I have not failed. I've just found 10,000 ways that won't work.”",
+
  "“A woman is like a tea bag; you never know how strong it is until it's in hot water.”",
+
  '“A day without sunshine is like, you know, night.”']
+
+### Quotes To Scrape 페이지 크롤링하기 - select
+
+하지만, 여러 태그를 타고 들어가야 정보를 찾을 수 있다면 find_all을 여러번 사용해야 하는 번거로움이 있습니다.
+
+따라서, 이를 해결하기 위해 select 함수를 통해 좀 더 쉽게 데이터에 접근할 수 있습니다.
+
+```py
+# class명이 quote인 div >(하부) class명이 text인 span
+quote_text = quote_html.select('div.quote > span.text')
+[i.text for i in quote_text]
+```
+그러면 위 결과 값과 동일한 값을 추출하게 됩니다.
