@@ -12,12 +12,10 @@
 - 저작권 문제: 신문기사, 책, 논문, 사진 등 저작권이 있는 자료를 통해 부당이득을 얻는 행위를 할 경우 **법적 제재**를 받을 수 있습니다.
 
 ### GET, POST
-
 - GET 방식이란, 서버로부터 데이터를 요청하기 위해 URL에 필요한 정보를 담아 전송하는 방법입니다.
-
 - POST 방식이란, 서버로 데이터를 제출하기 위해 HTTP Body에 데이터를 담아 전송하는 방법입니다.
-    - POST 방식을 알려면 개발자 도구 -> Network -> Headers의 Request Method를 봐야 합니다.
-    - POST 방식은 URL에 정보가 나오지 않기 때문에 위와 같은 방식으로 들어가면 Payload에 나와 있습니다.
+    * POST 방식을 알려면 개발자 도구 -> Network -> Headers의 Request Method를 봐야 합니다.
+    * POST 방식은 URL에 정보가 나오지 않기 때문에 위와 같은 방식으로 들어가면 Payload에 나와 있습니다.
 
 ###  Quotes To Scrape 페이지 크롤링하기 - find_all
 
@@ -52,9 +50,9 @@ quote_html = BeautifulSoup(quote.content)
 quote.content가 html 구조를 담고 있기 때문에 이를 BeautifulSoup 안에 넣고 quote_html을 실행하면
 ![html](img/html-beautifulsoup.png)
 
-일부분이긴 하지만 html 구조로 되어 있어 읽기 편하졌습니다. 이제 페이지에서 명언 부분만을 불러오기 위해
+일부분이긴 하지만 html 구조로 되어 있어 읽기 편하졌습니다. 
 
-find_all을 활용합니다.
+이제 페이지에서 명언 부분만을 불러오기 위해 find_all을 활용합니다.
 
 ```py
 # div 태그의 class가 quote인 부분
