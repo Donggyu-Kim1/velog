@@ -102,11 +102,13 @@ quote_div[0].find_all('span', class_='text')[0].text
 
 하지만, 여러 태그를 타고 들어가야 정보를 찾을 수 있다면 find_all을 여러번 사용해야 하는 번거로움이 있습니다.
 
-따라서, 이를 해결하기 위해 select 함수를 통해 좀 더 쉽게 데이터에 접근할 수 있습니다.
+따라서, 이를 해결하기 위해 select 함수(태크.태크명)를 통해 좀 더 쉽게 데이터에 접근할 수 있습니다.
 
 ```py
 # class명이 quote인 div >(하부) class명이 text인 span
 quote_text = quote_html.select('div.quote > span.text')
 [i.text for i in quote_text]
 ```
-그러면 위 결과 값과 동일한 값을 추출하게 됩니다.
+그러면 위 결과와 동일한 값을 추출하게 됩니다.
+
+이렇게 BeautifulSoup 라이브러리를 통해 웹 크롤링을 해봤습니다.
