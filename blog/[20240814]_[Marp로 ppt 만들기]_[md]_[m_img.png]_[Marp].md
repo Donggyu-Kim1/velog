@@ -31,3 +31,60 @@ marp: true
 5. 이제 마크다운 문법으로 작성하면 ppt가 그에 맞게 만들어집니다.
 
 ## Marp 활용법
+
+기본적인 활용법은 2가지입니다. 문서 작성은 마크다운으로 하면 되지만,
+
+ppt로써의 기능을 하려면 스타일링이 가능해야 합니다.
+
+#### MD 파일 내에서 스타일링 하기
+```md
+---
+marp: true
+title: 제목
+header: 상단에 들어갈 내용
+footer: 하단에 들어갈 내용
+paginate: ture -> 쪽 수 매기기
+theme: default, gaia(내장 테마)
+style: |
+h1 {
+    스타일을 직접 지정할 수 있습니다.
+}
+---
+```
+
+이미지 첨부의 경우도 마크다운 문법으로 할 수 있는데 사진 설명란에 다음과 같이 위치와 크기를 지정해주면
+그에 맞게 사진이 업로드 됩니다.
+```md
+ ![bg right height:300px](cute_hamster.jpg)
+```
+
+#### 외부 css 파일로 테마 만들기
+
+내부에 style 태그를 쭉 쓰면 코드가 길어지고 읽기 어려워집니다. 따라서 외부에 css 파일을 만드는 것도 하나의 방법입니다.
+
+외부 css 파일로 테마를 만드는 것은 상당히 복잡하여 만들진 못했지만.. 방법은 다음과 같습니다.
+
+1. themes 폴더를 생성합니다.
+2. themes 폴더 안에 css 파일을 생성합니다.
+3. css 파일 상단에 `<!-- theme custom -->`을 입력하고 css 코드를 작성합니다. custom 부분에 원하는 테마명을 입력합니다.
+4. .vscode 폴더를 생성합니다.
+5. .vscode 폴더 안에 settings.json 파일을 만듭니다.
+
+그리고 settings.json에 다음과 같이 작성합니다.
+```
+{
+    "markdown.marp.themes": [
+      "./themes/custom-theme.css"
+    ]
+}
+
+# custom-theme.css에는 themes 폴더 안의 지정한 파일명을 작성해주면 됩니다.
+```
+
+마지막으로 css 파일 상단에 입력했던 테마명을 Md 파일에 theme에 지정해줍니다.
+
+그러면 원하는 스타일로 만들 수 있게 됩니다. 
+
+위 내용을 github에 올려봤습니다. 파일, 코드, ppt가 궁금하시다면 [git_Marp](https://github.com/Donggyu-Kim1/Marp)를 참고해주세요.
+
+스타일링의 경우, [Marp 테마 CSS](https://marpit.marp.app/theme-css)를 참고하면 좋습니다.
