@@ -1,9 +1,9 @@
 # Marp로 ppt 작성하기
 
-## 목차
-1. Marp란?
-2. VSCode로 Marp 시작하기
-3. 활용법
+# 목차
+[1. Marp란?](#marp란)
+[2. VSCode로 Marp 시작하기](#vs-code로-marp-시작하기)
+[3. 활용법](#marp-활용법)
 
 ## Marp란?
 Marp란 마크다운을 변환할 수 있는 도구로 .md 파일을 쉽고 빠르게 프리젠테이션 문서로 변환해주는 툴입니다.
@@ -87,4 +87,4 @@ h1 {
 
 위 내용을 github에 올려봤습니다. 파일, 코드, ppt가 궁금하시다면 [git_Marp](https://github.com/Donggyu-Kim1/Marp)를 참고해주세요.
 
-스타일링의 경우, [Marp 테마 CSS](https://marpit.marp.app/theme-css)를 참고하면 좋습니다.
+Marp에 대해 더 알고 싶다면, [Marp](https://marpit.marp.app/directives)를 참고하면 좋습니다.
