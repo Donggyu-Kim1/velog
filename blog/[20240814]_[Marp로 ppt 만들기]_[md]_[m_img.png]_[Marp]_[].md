@@ -1,9 +1,9 @@
 # Marp로 ppt 작성하기
 
 # 목차
-[1. Marp란?](#marp란)
-[2. VSCode로 Marp 시작하기](#vs-code로-marp-시작하기)
-[3. 활용법](#marp-활용법)
+1. Marp란?
+2. VSCode로 Marp 시작하기
+3. 활용법
 
 ## Marp란?
 Marp란 마크다운을 변환할 수 있는 도구로 .md 파일을 쉽고 빠르게 프리젠테이션 문서로 변환해주는 툴입니다.
